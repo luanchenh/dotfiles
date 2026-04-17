@@ -127,7 +127,7 @@ configure_folder
 
 echo "Install packeges from pacman"
 install_core
-install_driver
+# install_driver
 install_application
 install_font
 install_input
