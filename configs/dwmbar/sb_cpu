@@ -2,5 +2,10 @@
 # CPU usage
 cpu=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
 # RAM usage
-mem=$(free | awk '/Mem:/ {printf("%.1f"), $3/$2 * 100.0}')
+# mem=$(free | awk '/Mem:/ {printf("%.1f"), $3/$2 * 100.0}')
+mem=$(free -k | awk '/Mem:/ {
+    used_gb = $3/1024/1024;
+    pct = ($3/$2) * 100;
+    printf "%.1fG (%.0f%%)", used_gb, pct
+}')
 echo -n "CPU ${cpu}% - RAM ${mem}%"
