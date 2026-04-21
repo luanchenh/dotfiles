@@ -141,7 +141,7 @@ install_yay
 sudo cp -r "./etc/X11/xorg.conf.d/30-touchpad.conf" "/etc/X11/xorg.conf.d/30-touchpad.conf"
 sudo cp -r "./packages/font/*" "/usr/share/fonts/"
 
-cp -r "./configs/*" "$CONFIG_PATH/"
+cp -r "./configs" "$CONFIG_PATH/"
 cp -r "./desktop/*" "$PICTURE_PATH/"
 cp -r "./.xinitrc" "$HOME_USER/.xinitrc"
 cp -r "./.zshrc" "$HOME_USER/.zshrc"
