@@ -21,7 +21,7 @@
 HOME_USER=$HOME
 PWD=$(pwd)
 
-DWM_GIT="https://github.com/namduongit/dwm"
+DWM_GIT="https://github.com/luanchenh/dwm"
 YAY_GIT="https://aur.archlinux.org/yay.git"
 
 BUID_PATH="$HOME_USER/Builds"
