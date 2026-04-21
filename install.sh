@@ -1,7 +1,4 @@
 #!/bin/bash
-# @author: github.com/namduongit
-# @contact: nguyennamduong205@gmail.com
-
 # Help
 # pacman --needed: only install packages that are NOT installed
 # comm -12 <(pacman -Slq | sort) <(sort "./packages/package-list")
@@ -32,7 +29,6 @@ main_dotfile() {
     echo "Install packages using dotfile"
     echo "Please check which operating system (OS) you are using. This dotfile will install the WM as dwm (X11)."
     echo " -------------------------------------------------------"
-    echo "| Github  : https://github.com/namduongit/dotfiles      |"
     echo "| OS      : Arch Linux x86_64                           |"
     echo "| WM      : dwm (X11)                                   |"
     echo " -------------------------------------------------------"
@@ -52,7 +48,7 @@ install_core() {
 }
 
 install_driver() {
-    echo "Install intel driver and NVIDIA driver (mesa and nvidia driver)"
+    echo "Install AMD driver (mesa and nvidia driver)"
     valid_package=$(comm -12 <(pacman -Slq | sort) <(sort ./packages/driver.txt) | xargs)
     echo "Script will install some package: $valid_package"
     case $answer in
@@ -127,7 +123,7 @@ configure_folder
 
 echo "Install packeges from pacman"
 install_core
-# install_driver
+install_driver
 install_application
 install_font
 install_input
