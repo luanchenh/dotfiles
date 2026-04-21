@@ -58,6 +58,8 @@ do
     [ $(( sec % 60   )) -eq 0 ] && update_battery
     [ $(( sec % 5    )) -eq 0 ] && update_datetime
     [ $(( sec % 5    )) -eq 0 ] && update_cpu
+    [ $(( sec % 5    )) -eq 0 ] && update_volume
+    [ $(( sec % 5    )) -eq 0 ] && update_backlight
     # [ $(( sec % 5    )) -eq 0 ] && update_bluetooth
 
     # how often the display updates
